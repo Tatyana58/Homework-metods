@@ -17,7 +17,7 @@ public class Main {
         – При изменении значения года программа выводит корректный результат.
         – В консоль выведены результат программы.
          */
-        int yearСurrent = 2023;
+        int yearСurrent = 2020;
         checksLeapYear(yearСurrent);
         System.out.println("Задание №2");
         /*### Задание 2
@@ -48,8 +48,8 @@ public class Main {
         (обычную или lite) и для какой ОС (Android или iOS) нужно установить пользователю.
         *Подсказку с выполнением задания вы можете найти в шпаргалке урока.*
         */
-        int clientDeviceYear = 2014;
-        byte clientOS = 2; //0 — iOS или 1 — Android
+        int clientDeviceYear = 2015;
+        byte clientOS = 1; //0 — iOS или 1 — Android
         definitionOS(clientOS,clientDeviceYear);
         System.out.println("Задание №3");
         /*### Задание 3
@@ -72,6 +72,8 @@ public class Main {
         – Метод написан корректно.
         – Все условия задачи соблюдены.
         */
+        short deliveryDistance = 95;
+        findDeliveryTime(deliveryDistance);
     }
     public static void checksLeapYear(int year) {
         if (year % 4 == 0) {
@@ -96,5 +98,9 @@ public class Main {
         }else {
         System.out.println("Введите корректные данные:  0 — iOS или 1 — Android");
         }
+    }
+    public static void findDeliveryTime(int distance){
+        int deliveryDistance = 1 + (distance + 20) / 40;
+        System.out.println("Потребуется дней : " + deliveryDistance);
     }
 }
